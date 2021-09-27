@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body, h1, h2, h3, p{
+body, h1, h2, h3, p, ul, li{
     margin: 0;
     padding: 0;
 }
@@ -35,24 +35,36 @@ header{
     align-items: center;
     justify-content: space-between;
     color: var(--clr-white);
-    padding-right: 20px;
+    padding: 10px 20px 10px 0;
 }
 
 .logo{
-    width: 200px;
+    width: clamp(130px, 20.8vw, 200px);
 }
 
 .logo img{
-    width: 100%
+    width: 100%;
 }
 
-h1{
-    font-size: 2.5rem;
+h1 .titre{
+    font-size: clamp(2rem, 5.16vw, 2.5rem);
     text-align: right;
+    line-height: 0.8;
+    margin-bottom: 10px;
 }
 
-h1 span{
-    font-size: 1.5rem;
+h1 .sous-titre{
+    font-size: clamp(0.1rem, 3.1vw, 1.5rem);
+    line-height: 0.1;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+h1 .sous-titre p{
+    margin: 0;
 }
 
 h2{
@@ -73,6 +85,18 @@ p{
     margin-bottom: 5px;
 }
 
+ul{
+    margin-left: 15px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.scenario, .brief{
+    margin: 0 10px;
+}
+
 .emphasis{
     font-weight: 700;
     color: var(--clr-primary);
@@ -80,6 +104,7 @@ p{
 
 .email{
     border: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .email .content {
